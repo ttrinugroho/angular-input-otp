@@ -9,13 +9,17 @@
 </button>
 <ul>
   <li><label for="">length:</label>&nbsp;
-<input type="number" min="1" max="10" (change)="onConfigChange()" [(ngModel)]="config.length" #length="ngModel"></li>
+    <input type="number" min="1" max="10" (change)="onConfigChange()" [(ngModel)]="config.length" #length="ngModel">
+  </li>
   <li><input type="checkbox" (change)="onConfigChange()" [(ngModel)]="config.allowNumbersOnly" id="isNumber" #isNumber="ngModel">
-<label for="">allowNumbersOnly</label></li>
+    <label for="">allowNumbersOnly</label>
+  </li>
   <li><input type="checkbox" (change)="onConfigChange()" [(ngModel)]="config.disableAutoFocus" id="isFocus" #isFocus="ngModel">
-<label for="">disableAutoFocus</label></li>
+    <label for="">disableAutoFocus</label>
+  </li>
   <li><input type="checkbox" (change)="onConfigChange()" [(ngModel)]="config.isPasswordInput" id="isPassword" #isPassword="ngModel">
-<label for="isPassword">isPasswordInput</label></li>
+    <label for="isPassword">isPasswordInput</label>
+  </li>
 </ul>
 
 <h2>Fiture</h2>
@@ -25,3 +29,9 @@
   <li>Only Number</li>
   <li>View Password</li>
 </ul>
+<a href="https://github.com/code-farmz/ng-otp-input">
+  <h3>Sumber Referensi</h3>
+</a>
+<a href="https://github.com/ttrinugroho/angular-input-otp">
+  <h3>Repository</h3>
+</a>
