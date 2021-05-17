@@ -1,0 +1,17 @@
+<div class="wrapper" id="c_{{componentKey}}" *ngIf="otpForm?.controls">
+  <form [class.errorshake]="isError" [formGroup]="otpForm">
+    <input
+      [pattern]="config.allowNumbersOnly ? '\\d*' : ''"
+      [type]="inputType"
+      appNumberOnly
+      [placeholder]="config?.placeholder || ''"
+      [disabledNumberOnly]="!config.allowNumbersOnly"
+      *ngFor="let item of otpForm?.controls | keys;let i=index"
+      maxlength="1"
+      class="otp-input"
+      (keydown)="onKeyDown($event)"
+      (keyup)="onKeyUp($event, i)"
+      autocomplete="off"
+      [formControlName]="item" id="otp_{{i}}_{{componentKey}}">
+  </form>
+</div>

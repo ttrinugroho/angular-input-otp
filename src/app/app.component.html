@@ -1,0 +1,27 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Membuat OTP di Angular
+</p>
+<app-input-otp #inputOtp *ngIf="showComponent" (onInputChange)="onOtpChange($event)" [config]="config"></app-input-otp>
+<br>
+<button (click)="onError()">
+  simulasi error input
+</button>
+<ul>
+  <li><label for="">length:</label>&nbsp;
+<input type="number" min="1" max="10" (change)="onConfigChange()" [(ngModel)]="config.length" #length="ngModel"></li>
+  <li><input type="checkbox" (change)="onConfigChange()" [(ngModel)]="config.allowNumbersOnly" id="isNumber" #isNumber="ngModel">
+<label for="">allowNumbersOnly</label></li>
+  <li><input type="checkbox" (change)="onConfigChange()" [(ngModel)]="config.disableAutoFocus" id="isFocus" #isFocus="ngModel">
+<label for="">disableAutoFocus</label></li>
+  <li><input type="checkbox" (change)="onConfigChange()" [(ngModel)]="config.isPasswordInput" id="isPassword" #isPassword="ngModel">
+<label for="isPassword">isPasswordInput</label></li>
+</ul>
+
+<h2>Fiture</h2>
+<ul>
+  <li>Paste Code OTP</li>
+  <li>Error Shake</li>
+  <li>Only Number</li>
+  <li>View Password</li>
+</ul>
