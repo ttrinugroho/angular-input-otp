@@ -2,8 +2,10 @@
 <p>
   Membuat OTP di Angular
 </p>
-<app-input-otp #inputOtp *ngIf="showComponent" (onInputChange)="onOtpChange($event)" [config]="config"></app-input-otp>
-<br>
+<app-input-otp #inputOtp *ngIf="showComponent" (inputChange)="onOtpChange($event)" [config]="config"></app-input-otp>
+<hr>
+<h4>Value: {{otp}}</h4>
+<hr>
 <button (click)="onError()">
   simulasi error input
 </button>
@@ -21,14 +23,15 @@
     <label for="isPassword">isPasswordInput</label>
   </li>
 </ul>
-
-<h2>Fiture</h2>
+<hr>
+<h2>Fitur</h2>
 <ul>
   <li>Paste Code OTP</li>
   <li>Error Shake</li>
   <li>Only Number</li>
   <li>View Password</li>
 </ul>
+<hr>
 <a href="https://github.com/code-farmz/ng-otp-input">
   <h3>Sumber Referensi</h3>
 </a>

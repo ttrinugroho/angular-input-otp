@@ -14,10 +14,10 @@ export class AppComponent {
 
   config: Config = {
     length: 5,
-    allowNumbersOnly: true,
+    allowNumbersOnly: false,
     placeholder: '0',
-    disableAutoFocus: true,
-    isPasswordInput: true
+    disableAutoFocus: false,
+    isPasswordInput: false
   };
 
   onConfigChange() {
@@ -33,6 +33,7 @@ export class AppComponent {
   }
 
   onError(): void {
+    this.otp = null;
     this.inputOtp.setError();
   }
 }
